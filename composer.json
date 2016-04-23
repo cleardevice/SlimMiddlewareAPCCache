@@ -1,0 +1,32 @@
+{
+  "name": "cleardevice/slim-middleware-apc-cache",
+  "description": "Cache Middleware for PHP Slim 2.* micro framework using APC Cache with response ttl setup",
+  "type": "library",
+  "version": "0.0.1",
+  "keywords": [
+    "slimcache",
+    "SlimAPCCache",
+    "cache",
+    "slimphp",
+    "slim",
+    "APC",
+    "APCCache",
+    "Middleware",
+    "SlimMiddleware"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/cleardevice/SlimMiddlewareAPCCache",
+  "authors": [
+    {
+      "name": "cd"
+    }
+  ],
+  "require": {
+    "slim/slim": ">=2.4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "cleardevice\\SlimMiddlewareAPCCache\\": "src"
+    }
+  }
+}
