@@ -49,11 +49,8 @@ class SlimMiddlewareAPCCache extends \Slim\Middleware
         if (($response->status() == 200)) {
             $ttl = $this->app->container->get(self::TTL_KEY, $this->ttl);
 
+            // no cache
             if ($ttl < 0) {
-                throw new \Exception('TTL value is invalid');
-            }
-
-            if ($ttl == 0) {
                 return true;
             }
 
