@@ -15,8 +15,8 @@ class SlimMiddlewareAPCCache extends \Slim\Middleware
 
     public function __construct($ttl = self::DEFAULT_TTL, $prefix = self::DEFAULT_CACHE_PREFIX)
     {
-        if (false === extension_loaded('apc') || false === ini_get('apc.enabled')) {
-            throw new \Exception('APC not available');
+        if (false === extension_loaded('apcu') || false === ini_get('apc.enabled')) {
+            throw new \Exception('APCu not available');
         }
 
         $this->ttl = $ttl;
@@ -29,9 +29,9 @@ class SlimMiddlewareAPCCache extends \Slim\Middleware
         $response = $this->app->response();
 
         // Check cache
-        if (apc_exists($key_name)) {
+        if (apcu_exists($key_name)) {
             // Return content from cache
-            $data = apc_fetch($key_name);
+            $data = apcu_fetch($key_name);
 
             foreach ($data['header'] as $key => $value) {
                 $response->headers->set($key, $value);
@@ -61,7 +61,7 @@ class SlimMiddlewareAPCCache extends \Slim\Middleware
                 'body' => $response->body()
             );
 
-            apc_store($key_name, $data, $ttl);
+            apcu_store($key_name, $data, $ttl);
         }
 
         return true;

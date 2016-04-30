@@ -3,7 +3,7 @@ SlimMiddlewareAPCCache
 [![Latest Stable Version](https://poser.pugx.org/cleardevice/slim-middleware-apc-cache/v/stable.svg)](https://packagist.org/packages/cleardevice/slim-middleware-apc-cache)
 [![License](https://poser.pugx.org/cleardevice/slim-middleware-apc-cache/license.svg)](https://github.com/cleardevice/SlimMiddlewareAPCCache/blob/master/LICENSE)
 
-Cache Middleware for PHP [Slim 2.* micro framework](http://www.slimframework.com/) using [APC Cache](http://www.php.net/manual/en/book.apc.php)
+Cache Middleware for PHP [Slim 2.* micro framework](http://www.slimframework.com/) using [APCu Cache](http://www.php.net/manual/en/book.apc.php)
 
 Main idea from https://github.com/palanik/SlimAPCCache
 
@@ -14,7 +14,7 @@ Main idea from https://github.com/palanik/SlimAPCCache
 ```json
 {
   "require": {
-    "cleardevice/slim-middleware-apc-cache": "0.0.1.*"
+    "cleardevice/slim-middleware-apc-cache": "0.1.0"
   }
 }
 ```
