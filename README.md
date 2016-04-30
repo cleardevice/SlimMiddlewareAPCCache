@@ -14,7 +14,7 @@ Main idea from https://github.com/palanik/SlimAPCCache
 ```json
 {
   "require": {
-    "cleardevice/slim-middleware-apc-cache": "0.1.0"
+    "cleardevice/slim-middleware-apc-cache": "0.1.0.*"
   }
 }
 ```
